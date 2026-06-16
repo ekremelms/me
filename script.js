@@ -176,10 +176,10 @@ revealStage(0);
 // ---- Cursor-following image on company hover --------------------------------
 // Drop real images at these paths (any format) to replace the placeholders.
 const COMPANIES = {
-  V7: "images/v7.svg",
-  ClickUp: "images/clickup.svg",
-  Qatalog: "images/qatalog.svg",
-  Lyssna: "images/lyssna.svg",
+  V7: "images/v7.png",
+  ClickUp: "images/clickup.png",
+  Qatalog: "images/qatalog.png",
+  Lyssna: "images/lyssna.png",
 };
 
 // Floating layer holding one (preloaded) image per company.

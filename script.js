@@ -210,9 +210,15 @@ root.querySelectorAll(".word").forEach((w) => {
 let activeCompany = null;
 function setActiveCompany(key) {
   activeCompany = key;
-  media.querySelectorAll("img").forEach((im) =>
-    im.classList.toggle("is-shown", im.dataset.key === key)
-  );
+  media.querySelectorAll("img").forEach((im) => {
+    const on = im.dataset.key === key;
+    im.classList.toggle("is-shown", on);
+    // size the box to this image's aspect ratio so it isn't cropped
+    if (on && im.naturalWidth) {
+      media.style.height =
+        Math.round(media.offsetWidth * (im.naturalHeight / im.naturalWidth)) + "px";
+    }
+  });
 }
 
 // Eased follow: the image trails the cursor and tilts with horizontal speed,

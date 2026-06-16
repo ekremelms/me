@@ -174,19 +174,19 @@ setActiveLink();
 revealStage(0);
 
 // ---- Cursor-following image on company hover --------------------------------
-// Drop real images at these paths (any format) to replace the placeholders.
+// Each company: a thumbnail shown on hover, and an optional URL opened on click.
 const COMPANIES = {
-  V7: "images/v7.png",
-  ClickUp: "images/clickup.png",
-  Qatalog: "images/qatalog.png",
-  Lyssna: "images/lyssna.png",
+  V7: { img: "images/v7.png", url: "https://www.v7labs.com/" },
+  ClickUp: { img: "images/clickup.png", url: "https://clickup.com/" },
+  Qatalog: { img: "images/qatalog.png", url: null },
+  Lyssna: { img: "images/lyssna.png", url: "https://www.lyssna.com/" },
 };
 
 // Floating layer holding one (preloaded) image per company.
 const media = document.createElement("div");
 media.className = "hover-media";
 media.setAttribute("aria-hidden", "true");
-Object.entries(COMPANIES).forEach(([key, src]) => {
+Object.entries(COMPANIES).forEach(([key, { img: src }]) => {
   const img = document.createElement("img");
   img.src = src;
   img.alt = "";
@@ -203,6 +203,8 @@ root.querySelectorAll(".word").forEach((w) => {
   w.dataset.company = key;
   w.addEventListener("mouseenter", () => setActiveCompany(key));
   w.addEventListener("mouseleave", () => setActiveCompany(null));
+  const { url } = COMPANIES[key];
+  if (url) w.addEventListener("click", () => window.open(url, "_blank", "noopener"));
 });
 
 let activeCompany = null;

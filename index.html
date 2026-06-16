@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intro</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <button class="logo" id="logo" type="button" aria-label="Back to home">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0.75" y="0.75" width="22.5" height="22.5" rx="7.25" stroke="#BCC0C7" stroke-width="1.5"/>
+      <line x1="12.75" y1="0.75" x2="12.75" y2="23.25" stroke="#BCC0C7" stroke-width="1.5"/>
+      <line x1="12.75" y1="15.25" x2="23.25" y2="15.25" stroke="#BCC0C7" stroke-width="1.5"/>
+    </svg>
+  </button>
+  <button class="close" id="postClose" type="button" aria-label="Close">
+    <svg width="10" height="10" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 1 L13 13 M13 1 L1 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+  </button>
+  <main>
+    <p id="sentence" aria-live="polite"></p>
+  </main>
+
+  <article id="post" class="post" aria-hidden="true">
+    <div class="post__inner">
+      <h1 class="post__title">I was designing AI products before it was cool</h1>
+
+      <p>Six years ago, telling people you designed AI products got you a polite, slightly worried nod. Today it's the most crowded line on LinkedIn. I find that funny, and only a little annoying.</p>
+
+      <p>I've been a product designer for fifteen years. Long enough to live through three or four complete reinventions of "what good looks like," and to learn the one thing that never goes out of style: nobody cares about your interface. They care about what it lets them do. Everything I make starts there. The deep delight lives where value and craft meet: something genuinely useful that also happens to be a pleasure to use.</p>
+
+      <h2>What I do</h2>
+
+      <p>The short version: I translate intent into interface.</p>
+
+      <p>0-to-1 is where I'm happiest. It's the messy, unscoped phase that makes most people reach for a roadmap and makes me reach for a prototype. Give me a problem worth solving and enough room to build something you can click, and I'll build it, test it, throw most of it away, and keep the part that survives contact with a real person.</p>
+
+      <p>It's not only 0-to-1, though. I'm just as comfortable scaling what works from 1-to-N, and leading the designers doing it, where the job is to set a clear direction and then get out of the way so they can do their best work.</p>
+
+      <p>Some of the places I've done that:</p>
+
+      <ul>
+        <li><strong>V7</strong>: agentic interfaces in disguise, building the levers and gears of various models into primitives a human can actually explore, steer, and use to turn the unstructured into the structured.</li>
+        <li><strong>ClickUp</strong>: automations, workflows, and chat-based agents. Mostly the quiet, unglamorous craft of removing friction inside a super-app.</li>
+        <li><strong>Qatalog</strong>: design lead on a pre-Claude AI workspace, where knowledge retrieval needed no indexing. I owned every pixel that shipped, plus the brand and tone of voice.</li>
+        <li><strong>Lyssna</strong>: a usability-testing platform with a single obsession. High frequency, low friction.</li>
+      </ul>
+
+      <p>Some of the patterns I've shipped got copied across the industry, and not always the grand ones. Sometimes it's a clever sidebar trick. Sometimes it's an LLM that asks a question back instead of bluffing an answer. Sometimes it's just the shadow of a tropical tree falling across a landing page. I don't mind being copied; a pattern that gets copied is a pattern that worked.</p>
+
+      <h2>How I work</h2>
+
+      <p>I don't wait for a perfect brief. Hand me a vague problem and I'll come back with a few angles and one of them already built. Momentum beats permission, and a rough prototype ends an argument that a hundred Slack threads can't.</p>
+
+      <p>A decade of remote, async-first work taught me that writing <em>is</em> part of the design. When you're not in the room to defend a decision, the decision has to defend itself. Engineers, PMs, and founders are collaborators to me, not stakeholders to manage: I'll hand an engineer a prototype before a redline, and "how would we even build this?" is a design input from day one, not a problem for later. I'm a vibe-coder at heart, which mostly means I'd rather ship something real and learn from it than polish something hypothetical and guess.</p>
+
+      <h2>The point</h2>
+
+      <p>After fifteen years, the thing I still love is the sweet spot where business needs, aesthetics, technical constraints, and user expectations all meet. It's small, and it moves. But when you hit it, the elegant solution is also the shippable one and the one people didn't know they wanted. There's nothing better.</p>
+
+      <p>That's my job. Try to solve problems gracefully, drive behavior, and make it feel light and effortless.</p>
+
+      <p>There's always another zero waiting to become a one.</p>
+    </div>
+  </article>
+
+  <div class="actions">
+    <button type="button" class="btn btn--ghost" id="learnMore">Learn more</button>
+    <button type="button" class="btn btn--primary" id="getInTouch">Get in touch</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
